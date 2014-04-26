@@ -6,7 +6,7 @@ echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 hugo
 
 # Add changes to git.
-git add -A
+git add .
 
 # Commit changes.
 msg="rebuilding site `date`"
@@ -17,4 +17,4 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin master
-git subtree push --prefix=public git@github.com:imbc/imbc.github.io.git master
+git subtree push --prefix=public https://github.com:imbc/imbc.github.io.git master
