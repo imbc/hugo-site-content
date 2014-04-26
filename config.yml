@@ -1,6 +1,8 @@
-title: "thoroc"
+title: "International Monkey Business Corp."
 params:
     author: "Thomas Roche"
 indexes:
     category: "categories"
+    tag: "tags"
+    topic: "topics"
 baseurl: 'http://imbc.github.io/'

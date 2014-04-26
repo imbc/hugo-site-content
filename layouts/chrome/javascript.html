@@ -1,0 +1,67 @@
+
+
+<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>window.jQuery || document.write( "<script src='/static/vendor/js/libs/jquery-1.11.0.min.js'>\x3C/script>" )</script>
+
+<!-- this is where we put our custom functions -->
+<!-- don't forget to concatenate and minify if needed -->
+<script src="/static/js/vendor/lorem.min.js"></script>
+<script src="/static/js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="/static/js/plugins.js"></script>
+<script src="/static/js/main.js"></script>
+<script src="/static/j/fonts.js"></script>
+
+<!-- Asynchronous google analytics; this is the official snippet.
+     Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXX-XX']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+-->
+
+<script>
+    ( function() {
+        var j = function( a, b ) {
+            return window.getComputedStyle ? getComputedStyle( a ).getPropertyValue( b ) : a.currentStyle[b]
+        };
+        var k = function( a, b, c ) {
+            if( a.addEventListener )
+                a.addEventListener( b, c, false );
+            else
+                a.attachEvent( 'on' + b, c )
+        };
+        var l = function( a, b ) {
+            for( key in b )
+                if( b.hasOwnProperty( key ) )
+                    a[key] = b[key];
+            return a
+        };
+        window.fitText = function( d, e, f ) {
+            var g = l( {'minFontSize': -1 / 0, 'maxFontSize': 1 / 0}, f );
+            var h = function( a ) {
+                var b = e || 1;
+                var c = function() {
+                    a.style.fontSize = Math.max( Math.min( a.clientWidth / ( b * 10 ), parseFloat( g.maxFontSize ) ), parseFloat( g.minFontSize ) ) + 'px'
+                };
+                c();
+                k( window, 'resize', c )
+            };
+            if( d.length )
+                for( var i = 0; i < d.length; i++ )
+                    h( d[i] );
+            else
+                h( d );
+            return d
+        }
+    } )();
+    fitText( document.getElementById( 'title' ), 1 )
+</script>

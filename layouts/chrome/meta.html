@@ -1,0 +1,59 @@
+
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+
+<!--  Mobile Viewport
+http://j.mp/mobileviewport & http://davidbcalhoun.com/2010/viewport-metatag
+device-width : Occupy full width of the screen in its current orientation
+initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width (wrong for most sites)
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="author" content="{{.Author }}">
+<meta name="description" content="{{ .Description }}">
+<meta name="keywords" content="{{ range .Keywords }}{{ . }}, {{ end }}">
+
+<!-- Application-specific meta tags -->
+
+<!-- Don't forget to set your site up: http://google.com/webmasters -->
+<!--<meta name="google-site-verification" content="" />-->
+
+<!-- Windows 8: see http://msdn.microsoft.com/en-us/library/ie/dn255024%28v=vs.85%29.aspx for details -->
+<!--<meta name="application-name" content="" />-->
+<!--<meta name="msapplication-TileColor" content="" />-->
+<!--<meta name="msapplication-TileImage" content="" />-->
+<!--<meta name="msapplication-square150x150logo" content="" />-->
+<!--<meta name="msapplication-square310x310logo" content="" />-->
+<!--<meta name="msapplication-square70x70logo" content="" />-->
+<!--<meta name="msapplication-wide310x150logo" content="" />-->
+
+ <!-- open graph -->
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="{{ .Description }}"/>
+<meta property="og:title" content="{{ .Title }} : imbc.github.io/"/>
+<meta property="og:site_name" content="International Monkey Business Corp"/>
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}"/>
+<meta property="article:modified_time" content="{{ .Date.Format "2006-01-02" }}"/>
+
+{{ range .Keywords }}<meta property="article:tag" content="{{ . }}">
+{{ end }}
+
+<!--Twitter Cards-->
+<!--<meta name="twitter:card" content="summary">-->
+<!--<meta name="twitter:card" content="summary_large_image">-->
+<!--<meta name="twitter:site" content="">-->
+<!--<meta name="twitter:title" content="">-->
+<!--<meta name="twitter:creator" content="">-->
+<!--<meta name="twitter:description" content="">-->
+<!--<meta name="twitter:image:src" content="">-->
+<!--<meta name="twitter:domain" content="">-->

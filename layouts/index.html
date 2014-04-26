@@ -1,0 +1,28 @@
+<html>
+    <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+        <head>
+            <title>TODO supply a title</title>
+            <meta charset="UTF-8">
+            {{ template "chrome/meta.html" . }}
+            <link rel="shortcut icon" href="icon/favicon.ico">
+            <title>{{ .Site.Title }}</title>
+            <link rel="canonical" href="{{ .Permalink }}">
+            <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+
+            {{ template "chrome/style.html" }}
+        </head>
+        <body lang="en">
+            <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+            <p>Hello world! This is HTML5 Boilerplate.</p>
+
+            {{ template "chrome/subheader.html" . }}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+            {{ template "chrome/footer.html" }}
+            {{ template "chrome/javascript.html" }}
