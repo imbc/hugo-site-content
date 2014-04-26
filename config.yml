@@ -1,0 +1,6 @@
+title: "thoroc"
+params:
+    author: "Thomas Roche"
+indexes:
+    category: "categories"
+baseurl: 'http://imbc.github.io/'
